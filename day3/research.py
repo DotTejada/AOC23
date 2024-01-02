@@ -1,3 +1,5 @@
-txt = "4+67...1*3"
+txt = [0,1]
 
-print(len(txt))
+txt.pop(0)
+
+print(txt)
