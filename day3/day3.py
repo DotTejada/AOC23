@@ -135,6 +135,10 @@ def findup(line):
                 masterlist.append(uprightnum)
                 print(uprightnum)
                 
+            elif temp:
+                masterlist.append(temp)
+                print(temp)
+                
         else:
             #checks left
             increm = 1
@@ -233,6 +237,10 @@ def finddown(line):
                 downrightnum = combine_numbers(downrightnum)
                 masterlist.append(downrightnum)
                 print(downrightnum)
+            
+            elif temp:
+                masterlist.append(temp)
+                print(temp)
                
         else:
             #checks left
