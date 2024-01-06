@@ -7,7 +7,7 @@ mydict = {
 
 index = 0
 
-file_path = 'day2.txt'
+file_path = 'day2/day2.txt'
 
 with open(file_path, 'r') as file:
         
