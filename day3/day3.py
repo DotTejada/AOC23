@@ -8,15 +8,18 @@ pattern = r'(=|\/|-|\+|\*|%|\$|#|@|&)'
 
 filename = "day3/day3.txt"
 
+# makes a 2D array with the input 
 with open(filename, 'r') as f:
     for line in f.readlines():
         array.append(line.strip().split(' '))
 
+# creates the multi-digit numbers for adding into the answer
 def combine_numbers(numbers):
     combined_number = int(''.join(map(str, numbers)))
     
     return combined_number
 
+# finds all the relevant symbols in the given line
 def findsymbols(symbolindex, line):
     for count, ele in enumerate(array[line][0]):
         symbol = re.findall(pattern, ele)
@@ -27,6 +30,7 @@ def findsymbols(symbolindex, line):
             
     return symbolindex
      
+# finds all the numbers to the left and right of each symbol
 def findleftright(line):
     
     symbolindex = []
@@ -73,6 +77,7 @@ def findleftright(line):
             print(rnum)
         increm = 1
 
+# finds all the numbers above and diagonally above each symbol
 def findup(line):
     
     symbolindex = []
@@ -176,6 +181,7 @@ def findup(line):
                 masterlist.append(uprightnum)
                 print(uprightnum)
 
+# finds all the numbers below and diagonally below each symbol
 def finddown(line):
     
     symbolindex = []
@@ -279,6 +285,7 @@ def finddown(line):
                 masterlist.append(downrightnum)
                 print(downrightnum)
 
+# figures out which functions to use for each line
 with open(filename, 'r') as f:
     line = 0
     range = 140
@@ -296,13 +303,6 @@ with open(filename, 'r') as f:
             findleftright(line)
             findup(line)
             line += 1
-
-# print(array[line - 1][0])
-# print(array[line][0])
-# print(array[line + 1][0])
-
-# print(symbols)
-# print(symbolindex)
 
 print(masterlist)
 print(sum(masterlist))
