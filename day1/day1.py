@@ -1,6 +1,6 @@
 import re
 
-file_path = 'day1.txt'
+file_path = 'day1/day1.txt'
 
 def find_first_and_last_numbers(input):
     
@@ -20,8 +20,7 @@ def find_first_and_last_numbers(input):
             two_digit_number = int(str(first_number) + str(last_number))
             running_list.append(two_digit_number)
         
-    Sum = sum(running_list)
-    print(Sum)
+    print(sum(running_list))
 
 
 find_first_and_last_numbers(file_path)

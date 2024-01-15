@@ -12,7 +12,7 @@ word_to_number = {
     'nine': 9
 }
 
-file_path = 'day1.txt'
+file_path = 'day1/day1.txt'
 
 def find_first_and_last_numbers(input):
     
