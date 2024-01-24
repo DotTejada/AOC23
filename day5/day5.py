@@ -1,4 +1,4 @@
-with open("day5/day5.txt") as f:
+with open("day5/test.txt") as f:
   file = f.read().split("\n\n")
 
 seeds = [int(x) for x in file[0].replace("seeds: ", "").split(" ")]
@@ -17,5 +17,8 @@ for seed in seeds:
         break
 
   locs.append(seed)
+
+print(file)
+print(maps)
 print(locs)
 print(min(locs))
